@@ -1,5 +1,5 @@
 
-    @tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -109,5 +109,9 @@ li:hover{
 .ps-menu-label{
   display: flex;
   justify-content: space-between;
+}
+
+.bg-gray-300 {
+  min-height: 100vh; /* Change fixed height to minimum height of viewport */
 }
 

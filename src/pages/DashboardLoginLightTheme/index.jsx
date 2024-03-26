@@ -19,18 +19,18 @@ const DashboardLoginLightThemePage = () => {
             <Input
               name="username"
               placeholder="Login"
-              className="p-0 placeholder:text-white-A700 text-center text-sm w-full"
-              wrapClassName="w-[99%]"
+              className="p-0 placeholder:text-white-A700 text-center text-sm min-w-[276px]"
+              // wrapClassName="w-[73%]"
             ></Input>
             <Input
               name="password"
               placeholder="Password"
-              className="p-0 placeholder:text-white-A700 text-center text-sm w-full"
-              wrapClassName="mt-[43px] w-[99%]"
+              className="p-0 placeholder:text-white-A700 text-center text-sm min-w-[276px]"
+              wrapClassName="mt-[43px]"
               type="password"
             ></Input>
-            <div className="flex flex-row font-montserrat items-start justify-start mt-[17px] w-[97%] md:w-full">
-              <div className="bg-blue_gray-800 h-[17px] mb-0.5 rounded-[5px] w-[18px]"></div>
+            <div className="flex flex-row font-montserrat items-start justify-center mt-[17px] w-[97%] md:w-full">
+              <button className="cursor-pointer bg-blue_gray-800 h-[17px] mb-0.5 rounded-[5px] w-[18px]"></button>
               <Text
                 className="ml-[7px] text-center text-sm text-teal-900"
                 size="txtMontserratMedium14"
@@ -68,7 +68,7 @@ const DashboardLoginLightThemePage = () => {
           style={{ backgroundImage: "url('images/img_group27.svg')" }}
         >
           <Img
-            className="h-[70px] ml-9 md:ml-[0] mr-[1174px] my-5 w-[70px]"
+            className="h-[70px] w-[70px] mr-auto ml-5  mt-5"
             src="images/img_clock.svg"
             alt="clock"
           />
