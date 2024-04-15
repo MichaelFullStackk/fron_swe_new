@@ -4,23 +4,15 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { Button, Img, Text } from "components";
 
-const DashboardHomepagePage = () => {
+const DashboardMainHomepagePage = () => {
   const navigate = useNavigate();
   const handleNavigate = () => navigate("/login");
   return (
     <>
       <div className="bg-gray-300 flex flex-col font-lexenddeca relative mx-auto w-full h-screen">
-        {/* <Button
-          className="absolute top-0 cursor-pointer min-w-[300px] text-center text-xl right-0 mt-5 mr-4"
-          color="blue_gray_800"
-          size="xs"
-          onClick={handleNavigate}
-        >
-          Login
-        </Button> */}
         <div className="flex items-center justify-center">
           <div className="bg-[#5de194] flex flex-row items-center justify-between p-[5px] md:px-5 rounded-[25px] w-[95%] mt-5">
-            <Link to="/">
+            <Link to="/main">
               <div className="flex items-center">
                 <img
                   src="/images/icon_main.png"
@@ -37,28 +29,28 @@ const DashboardHomepagePage = () => {
                 </Text>
               </div>
             </Link>
-            <div className="flex flex-row items-center justify-between gap-[20rem]">
+            <div className="flex flex-row items-center justify-between gap-[10rem]">
               <div className="flex flex-row items-center justify-between gap-10">
                 <div className="flex items-center">
-                  <Link to="/">
+                  <Link to="/main">
                     <Text
-                      className="text-2xl sm:text-[38px] md:text-[44px] text-black-400 text-center ml-1 underline cursor-pointer"
+                      className="text-3xl sm:text-[38px] md:text-[44px] text-white-A700 text-center ml-1 underline cursor-pointer"
                       size="txtLexendDecaRegular48"
                     >
                       home
                     </Text>
                   </Link>
                 </div>
-                <div className="flex items-center ml-3">
-                  <Link to="/">
-                    <Text
-                      className="text-3xl sm:text-[38px] md:text-[44px] text-white-A700 text-center ml-1 hover:underline cursor-pointer mr-2"
-                      size="txtLexendDecaRegular48"
-                    >
-                      Welcome Page
-                    </Text>
-                  </Link>
-                </div>
+                <div className="flex items-center">
+                    <Link to="/translater">
+                      <Text
+                        className="text-3xl sm:text-[38px] md:text-[44px] text-white-A700 text-center ml-1 hover:underline cursor-pointer mr-2"
+                        size="txtLexendDecaRegular48"
+                      >
+                        My progress 
+                      </Text>
+                    </Link>
+                  </div>
                 <div className="flex items-center">
                   <Link to="/about">
                     <Text
@@ -81,14 +73,36 @@ const DashboardHomepagePage = () => {
                 </div>
               </div>
               <div className="flex items-center">
-                <div className="bg-blue_gray-800 flex flex-col items-center md:ml-auto mr-[17px] p-[9px] px-[50px] md:px-5 rounded-[10px] w-full">
-                  <div className="h-[25px] relative w-full overflow-hidden">
+                {/* <div className="bg-blue_gray-800 flex flex-col items-center md:ml-auto mr-[17px] p-[9px] px-[30px] md:px-5 rounded-[10px] w-full">
+                    <div className="h-[25px] relative w-[100%]">
+                      <Text
+                        className="m-auto text-center text-white-A700 text-xl md:text-[15px] hover:text-back-A200"
+                        size="txtLexendDecaRegular20"
+                      >
+                        log out
+                      </Text>
+                    </div>
+                  </div> */}
+                <div className="bg-blue_gray-800 flex flex-col items-center md:ml-auto mr-[17px] p-[9px] px-[30px] md:px-5 rounded-[10px] w-full hover:text-black">
+                  <div className="h-[25px] relative w-[100%]">
                     <Link to="/login">
                       <Text
                         className="m-auto text-center text-white-A700 text-xl md:text-[15px]"
                         size="txtLexendDecaRegular20"
                       >
-                        login
+                        log out
+                      </Text>
+                    </Link>
+                  </div>
+                </div>
+                <div className="bg-blue_gray-800 flex flex-col items-center md:ml-auto mr-[17px] p-[9px] px-[50px] md:px-5 rounded-[10px] w-full">
+                  <div className="h-[25px] relative w-full overflow-hidden">
+                    <Link to="/translater">
+                      <Text
+                        className="m-auto text-center text-white-A700 text-xl md:text-[15px] whitespace-nowrap"
+                        size="txtLexendDecaRegular20"
+                      >
+                        Max Vasteppan
                       </Text>
                     </Link>
                   </div>
@@ -109,7 +123,7 @@ const DashboardHomepagePage = () => {
               className="text-4xl md:text-2xl text-blue_gray-800 text-center mt-5" //sm:text-[32px]
               size="txtLexendDecaRegular36"
             >
-              please to start your work sign in
+              please to start work with your project
             </Text>
           </div>
         </div>
@@ -130,4 +144,4 @@ const DashboardHomepagePage = () => {
   );
 };
 
-export default DashboardHomepagePage;
+export default DashboardMainHomepagePage;
