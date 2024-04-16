@@ -14,6 +14,12 @@ const DashboardTranslater = React.lazy(
 const DashboardOwn = React.lazy(
   () => import("pages/DashboardOwn"),
 );
+const DashboardOwnPm = React.lazy(
+  () => import("pages/DashboardOwnPm"),
+);
+const DashboardOwnChief = React.lazy(
+  () => import("pages/DashboardOwnChief"),
+);
 const DashboardLoginLightTheme = React.lazy(
   () => import("pages/DashboardLoginLightTheme"),
 );
@@ -55,6 +61,14 @@ const ProjectRoutes = () => {
           <Route
             path="/own"
             element={<DashboardOwn />}
+          />
+          <Route
+            path="/ownpm"
+            element={<DashboardOwnPm />}
+          />
+          <Route
+            path="/ownchief"
+            element={<DashboardOwnChief />}
           />
           <Route
             path="/cheif"

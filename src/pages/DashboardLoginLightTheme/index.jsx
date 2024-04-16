@@ -87,24 +87,50 @@ import { Button, Img, Input, Text } from "components";
 
 const DashboardLoginLightThemePage = () => {
   const navigate = useNavigate();
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState(null);
+  const [password, setPassword] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
 
+  const handleUsernameChange = (e) => {
+    setUsername(e);
+    // const { value } = e.target;
+    // setUsername(value);
+    // console.log("e", value);
+  };
+
+  const handlePasswordChange = (e) => {
+    // const { value } = e.target;
+    setPassword(e);
+    // console.log("e", e);
+  };
+
   const handleNavigate = () => {
-    // if (username === "max.vasteppan@f1.com" && password === "qwerty1234") {
-    //   console.log("Username:", username);
-    //   console.log("Password:", password);
-    //   navigate("/translater");
-    // } else {
-    //   setErrorMessage("Incorrect email or password.");
-    // }
-    navigate("/translater");
+    // // if (username === "max.vasteppan@f1.com" && password === "qwerty1234") {
+    // //   console.log("Username:", username);
+    // //   console.log("Password:", password);
+    // //   navigate("/translater");
+    // // } else {
+    // //   setErrorMessage("Incorrect email or password.");
+    // // }
+    // navigate("/translater");
+    if (username === "max.vasteppan@f1.com") {
+      navigate("/translater");
+    }
+    if (username === "joo.max@gmail.com") {
+      navigate("/pm");
+    } else if (username === "yao.belfort@gmail.com") {
+      navigate("/cheif");
+    } else {
+      setErrorMessage("Incorrect username or password.");
+    }
+    console.log("username: ", username);
   };
 
   return (
     <>
-      <div className="bg-gray-300 flex flex-col font-lexenddeca sm:gap-10 md:gap-10 gap-[13rem] items-center justify-end mx-auto w-full">  {/*pt-24  */}
+      <div className="bg-gray-300 flex flex-col font-lexenddeca sm:gap-10 md:gap-10 gap-[13rem] items-center justify-end mx-auto w-full">
+        {" "}
+        {/*pt-24  */}
         <div className="flex items-center justify-center">
           <div className="bg-[#5de194] flex flex-row items-center justify-between p-[5px] md:px-5 rounded-[25px] w-full mt-5">
             <Link to="/">
@@ -218,12 +244,12 @@ const DashboardLoginLightThemePage = () => {
               onChange={(e) => setPassword(e.target.value)}
               // onChange={(e) => setPassword(e.target.value)}
             /> */}
-            <Input
+            {/* <Input
               name="username"
               placeholder="Login"
               className="p-0 placeholder:text-white-A700 text-center text-sm min-w-[276px]"
-              // value={username}
-              // onChange={(e) => setUsername(e.target.value)}
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
             <Input
               name="password"
@@ -233,7 +259,39 @@ const DashboardLoginLightThemePage = () => {
               type="password"
               // value={password}
               // onChange={(e) => setPassword(e.target.value)}
-            />
+            /> */}
+            <Input
+              name="username"
+              placeholder="username"
+              className="p-0 placeholder:text-white-A700 text-center text-sm min-w-[276px]"
+              wrapClassName="mt-[43px]"
+              type="username"
+              onChange={handleUsernameChange}
+            ></Input>
+            <Input
+              name="password"
+              placeholder="password"
+              className="p-0 placeholder:text-white-A700 text-center text-sm min-w-[276px]"
+              wrapClassName="mt-[43px]"
+              type="password"
+              onChange={handlePasswordChange}
+            ></Input>
+            {/* <Input
+              name="username"
+              placeholder="Login"
+              className="p-0 placeholder:text-white-A700 text-center text-sm min-w-[276px]"
+              value={username}
+              onChange={handleUsernameChange}
+            /> */}
+            {/* <Input
+              name="password"
+              placeholder="Password"
+              className="p-0 placeholder:text-white-A700 text-center text-sm min-w-[276px]"
+              wrapClassName="mt-[10px]"
+              type="password"
+              value={password}
+              onChange={handlePasswordChange}
+            /> */}
 
             <div className="flex flex-row font-montserrat items-start justify-center mt-[17px] w-[97%] md:w-full">
               <button className="cursor-pointer bg-blue_gray-800 h-[17px] mb-0.5 rounded-[5px] w-[18px]"></button>

@@ -102,12 +102,14 @@ const DashboardProjectManagerPage = () => {
                 </div>
                 <div className="bg-blue_gray-800 flex flex-col items-center md:ml-auto mr-[17px] p-[9px] px-[50px] md:px-5 rounded-[10px] w-full">
                   <div className="h-[25px] relative w-full overflow-hidden">
-                    <Text
-                      className="m-auto text-center text-white-A700 text-xl md:text-[15px] whitespace-nowrap"
-                      size="txtLexendDecaRegular20"
-                    >
-                      Product Manager
-                    </Text>
+                    <Link to="/ownpm">
+                      <Text
+                        className="m-auto text-center text-white-A700 text-xl md:text-[15px] whitespace-nowrap"
+                        size="txtLexendDecaRegular20"
+                      >
+                        Product Manager
+                      </Text>
+                    </Link>
                   </div>
                 </div>
               </div>

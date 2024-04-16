@@ -114,7 +114,7 @@ const DashboardRegisterLightThemePage = () => {
               {errorMessage}
             </Text>
           )}
-          <div className="flex flex-col items-center justify-start w-full">
+          <div className="flex flex-col items-center justify-start w-full gap-3">
             {/* <Input
               name="username"
               placeholder="Login"
